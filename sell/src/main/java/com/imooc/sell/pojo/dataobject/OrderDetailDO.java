@@ -1,7 +1,6 @@
-package com.imooc.sell.dataobject;
+package com.imooc.sell.pojo.dataobject;
 
 import lombok.Data;
-import org.hibernate.annotations.DynamicInsert;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -13,7 +12,7 @@ import java.math.BigDecimal;
  */
 @Entity
 @Data
-public class OrderDetail {
+public class OrderDetailDO {
 
     @Id
     private String detailId;

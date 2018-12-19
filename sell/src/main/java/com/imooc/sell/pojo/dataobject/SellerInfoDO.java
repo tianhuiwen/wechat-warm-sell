@@ -1,4 +1,4 @@
-package com.imooc.sell.dataobject;
+package com.imooc.sell.pojo.dataobject;
 
 import lombok.Data;
 
@@ -11,7 +11,7 @@ import javax.persistence.Id;
  */
 @Data
 @Entity
-public class SellerInfo {
+public class SellerInfoDO {
 
     @Id
     private String sellerId;
