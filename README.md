@@ -1,10 +1,15 @@
-# wechat-sell
-基于springboot构建的微信点餐系统
+# wechat-warm-sell
+基于 SpringBoot 构建的微信点餐系统
 
 ## 技术选型
+ *  Vue
+ *  Nginx
  *  Spring Boot
  *  Spring JPA
  *  Redis
- *  推送消息(WebSocket)
+ *  推送消息 WebSocket
  *  微信支付和退款
- *  分布式session和锁
+ *  分布式 session 和锁
+
+## 编码规范
+ * 阿里巴巴 Java 开发手册
