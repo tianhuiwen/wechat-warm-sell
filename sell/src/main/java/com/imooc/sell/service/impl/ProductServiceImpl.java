@@ -3,6 +3,7 @@ package com.imooc.sell.service.impl;
 import com.imooc.sell.constant.ProductStatusEnum;
 import com.imooc.sell.dao.ProductInfoDao;
 import com.imooc.sell.pojo.dataobject.ProductInfoDO;
+import com.imooc.sell.pojo.dto.CartDTO;
 import com.imooc.sell.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -42,7 +43,7 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
-    public void decreaseStock() {
+    public void decreaseStock(List<CartDTO> cartDTOList) {
 
     }
 
@@ -53,6 +54,11 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     public ProductInfoDO offSale(String productId) {
+        return null;
+    }
+
+    @Override
+    public ProductInfoDO findOne(String productId) {
         return null;
     }
 }

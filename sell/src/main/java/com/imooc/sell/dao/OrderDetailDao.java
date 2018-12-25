@@ -9,7 +9,7 @@ import java.util.List;
  * @author tianhuiwen
  * @date 2018/12/24 23:46
  */
-public interface OrderDetailRepository extends JpaRepository<OrderDetail, String> {
+public interface OrderDetailDao extends JpaRepository<OrderDetail, String> {
 
     /**
      * 根据订单id，查订单详情
