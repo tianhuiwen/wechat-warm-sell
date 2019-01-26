@@ -1,5 +1,6 @@
 package com.imooc.sell.service.impl;
 
+import cn.hutool.core.util.IdUtil;
 import com.imooc.sell.constant.OrderStatusEnum;
 import com.imooc.sell.constant.PayStatusEnum;
 import com.imooc.sell.constant.ResultEnum;
@@ -13,7 +14,6 @@ import com.imooc.sell.pojo.dto.CartDTO;
 import com.imooc.sell.pojo.dto.OrderDTO;
 import com.imooc.sell.service.OrderService;
 import com.imooc.sell.service.ProductService;
-import com.imooc.sell.utils.KeyUtil;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -43,7 +43,7 @@ public class OrderServiceImpl implements OrderService {
 
     @Override
     public OrderDTO createOrder(OrderDTO orderDTO) {
-        String orderId = KeyUtil.genUniqueKey();
+        String orderId = IdUtil.simpleUUID();
         BigDecimal orderAmount = new BigDecimal(BigInteger.ZERO);
 
         //查询商品信息
@@ -56,7 +56,7 @@ public class OrderServiceImpl implements OrderService {
             orderAmount = productInfo.getProductPrice().multiply(new BigDecimal(orderDetail.getProductQuantity()))
                     .add(orderAmount);
             //订单详情入库
-            orderDetail.setDetailId(KeyUtil.genUniqueKey());
+            orderDetail.setDetailId(IdUtil.simpleUUID());
             orderDetail.setOrderId(orderId);
             BeanUtils.copyProperties(productInfo, orderDetail);
             orderDetailDao.save(orderDetail);
