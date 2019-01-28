@@ -1,6 +1,6 @@
 package com.imooc.sell.dao;
 
-import com.imooc.sell.pojo.dataobject.OrderDetail;
+import com.imooc.sell.pojo.dataobject.OrderDetailDO;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
@@ -9,7 +9,7 @@ import java.util.List;
  * @author tianhuiwen
  * @date 2018/12/24 23:46
  */
-public interface OrderDetailDao extends JpaRepository<OrderDetail, String> {
+public interface OrderDetailDao extends JpaRepository<OrderDetailDO, String> {
 
     /**
      * 根据订单id，查订单详情
@@ -17,5 +17,5 @@ public interface OrderDetailDao extends JpaRepository<OrderDetail, String> {
      * @param orderId 微信openId
      * @return OrderDetails
      */
-    List<OrderDetail> findByOrderId(String orderId);
+    List<OrderDetailDO> findByOrderId(String orderId);
 }

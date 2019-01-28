@@ -1,6 +1,6 @@
 package com.imooc.sell.pojo.dto;
 
-import com.imooc.sell.pojo.dataobject.OrderDetail;
+import com.imooc.sell.pojo.dataobject.OrderDetailDO;
 import lombok.Data;
 
 import java.math.BigDecimal;
@@ -29,6 +29,6 @@ public class OrderDTO {
 
     private Integer payStatus;
 
-    private List<OrderDetail> orderDetailList;
+    private List<OrderDetailDO> orderDetailList;
 
 }

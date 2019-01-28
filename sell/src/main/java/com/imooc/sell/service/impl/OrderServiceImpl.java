@@ -7,8 +7,8 @@ import com.imooc.sell.constant.ResultEnum;
 import com.imooc.sell.dao.OrderDetailDao;
 import com.imooc.sell.dao.OrderMasterDao;
 import com.imooc.sell.exception.SellException;
-import com.imooc.sell.pojo.dataobject.OrderDetail;
-import com.imooc.sell.pojo.dataobject.OrderMaster;
+import com.imooc.sell.pojo.dataobject.OrderDetailDO;
+import com.imooc.sell.pojo.dataobject.OrderMasterDO;
 import com.imooc.sell.pojo.dataobject.ProductInfoDO;
 import com.imooc.sell.pojo.dto.CartDTO;
 import com.imooc.sell.pojo.dto.OrderDTO;
@@ -47,7 +47,7 @@ public class OrderServiceImpl implements OrderService {
         BigDecimal orderAmount = new BigDecimal(BigInteger.ZERO);
 
         //查询商品信息
-        for (OrderDetail orderDetail : orderDTO.getOrderDetailList()) {
+        for (OrderDetailDO orderDetail : orderDTO.getOrderDetailList()) {
             ProductInfoDO productInfo = productService.findOne(orderDetail.getProductId());
             if (productInfo == null) {
                 throw new SellException(ResultEnum.PRODUCT_NOT_EXIST);
@@ -63,13 +63,13 @@ public class OrderServiceImpl implements OrderService {
         }
 
         //写入订单数据库
-        OrderMaster orderMaster = new OrderMaster();
+        OrderMasterDO orderMasterDO = new OrderMasterDO();
         orderDTO.setOrderId(orderId);
-        BeanUtils.copyProperties(orderDTO, orderMaster);
-        orderMaster.setOrderAmount(orderAmount);
-        orderMaster.setOrderStatus(OrderStatusEnum.NEW.getCode());
-        orderMaster.setPayStatus(PayStatusEnum.WAIT.getCode());
-        orderMasterDao.save(orderMaster);
+        BeanUtils.copyProperties(orderDTO, orderMasterDO);
+        orderMasterDO.setOrderAmount(orderAmount);
+        orderMasterDO.setOrderStatus(OrderStatusEnum.NEW.getCode());
+        orderMasterDO.setPayStatus(PayStatusEnum.WAIT.getCode());
+        orderMasterDao.save(orderMasterDO);
 
         //扣库存
         List<CartDTO> cartDTOList = orderDTO.getOrderDetailList().stream()

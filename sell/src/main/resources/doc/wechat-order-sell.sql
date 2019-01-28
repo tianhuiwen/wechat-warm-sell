@@ -60,8 +60,8 @@ CREATE TABLE `product_category` (
   `create_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
   `update_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
   PRIMARY KEY (`category_id`) COMMENT '主键',
-  UNIQUE KEY `upe_category_type` (`category_type`) COMMENT '索引'
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8 COMMENT='类目表';
+  UNIQUE KEY `uk_category_type` (`category_type`) COMMENT '索引'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='类目表';
 
 -- ----------------------------
 -- Table structure for product_info

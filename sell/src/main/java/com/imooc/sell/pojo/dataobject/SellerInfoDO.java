@@ -4,6 +4,7 @@ import lombok.Data;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 /**
  * @author tianhuiwne
@@ -11,6 +12,7 @@ import javax.persistence.Id;
  */
 @Data
 @Entity
+@Table(name = "seller_info")
 public class SellerInfoDO {
 
     @Id
