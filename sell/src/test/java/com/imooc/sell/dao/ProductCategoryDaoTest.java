@@ -40,11 +40,13 @@ public class ProductCategoryDaoTest {
     }
 
     @Test
+    //@Transactional 数据回滚
     public void insert(){
         ProductCategoryDO productCategoryDO = new ProductCategoryDO();
-        productCategoryDO.setCategoryName("男生最爱");
-        productCategoryDO.setCategoryType(1);
-        productCategoryDao.save(productCategoryDO);
+        productCategoryDO.setCategoryName("女生最爱");
+        productCategoryDO.setCategoryType(2);
+        ProductCategoryDO categoryDO = productCategoryDao.save(productCategoryDO);
+        Assert.assertNotNull(categoryDO);
     }
 
 }
