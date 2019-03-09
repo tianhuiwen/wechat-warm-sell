@@ -59,6 +59,6 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     public ProductInfoDO findOne(String productId) {
-        return null;
+        return productInfoDao.findOne(productId);
     }
 }
