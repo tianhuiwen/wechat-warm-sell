@@ -1,6 +1,6 @@
 package com.imooc.sell.pojo.dto;
 
-import com.imooc.sell.pojo.dataobject.OrderDetailDO;
+import com.imooc.sell.pojo.dob.OrderDetailDO;
 import lombok.Data;
 
 import java.math.BigDecimal;

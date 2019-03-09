@@ -1,7 +1,7 @@
 package com.imooc.sell.service.impl;
 
 import com.imooc.sell.dao.ProductCategoryDao;
-import com.imooc.sell.pojo.dataobject.ProductCategoryDO;
+import com.imooc.sell.pojo.dob.ProductCategoryDO;
 import com.imooc.sell.service.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

@@ -1,4 +1,4 @@
-package com.imooc.sell.pojo.dataobject;
+package com.imooc.sell.pojo.dob;
 
 import com.imooc.sell.constant.OrderStatusEnum;
 import com.imooc.sell.constant.PayStatusEnum;

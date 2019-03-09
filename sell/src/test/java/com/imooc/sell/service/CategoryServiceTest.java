@@ -1,6 +1,6 @@
 package com.imooc.sell.service;
 
-import com.imooc.sell.pojo.dataobject.ProductCategoryDO;
+import com.imooc.sell.pojo.dob.ProductCategoryDO;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;

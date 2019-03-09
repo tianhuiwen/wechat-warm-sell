@@ -1,4 +1,4 @@
-package com.imooc.sell.pojo.dataobject;
+package com.imooc.sell.pojo.dob;
 
 import lombok.Data;
 

@@ -1,7 +1,7 @@
 package com.imooc.sell.controller;
 
-import com.imooc.sell.pojo.dataobject.ProductCategoryDO;
-import com.imooc.sell.pojo.dataobject.ProductInfoDO;
+import com.imooc.sell.pojo.dob.ProductCategoryDO;
+import com.imooc.sell.pojo.dob.ProductInfoDO;
 import com.imooc.sell.pojo.vo.ProductInfoVO;
 import com.imooc.sell.pojo.vo.ProductVO;
 import com.imooc.sell.pojo.vo.ResultVO;

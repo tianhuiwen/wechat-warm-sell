@@ -1,7 +1,7 @@
 package com.imooc.sell.dao;
 
 import cn.hutool.core.util.IdUtil;
-import com.imooc.sell.pojo.dataobject.ProductInfoDO;
+import com.imooc.sell.pojo.dob.ProductInfoDO;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;

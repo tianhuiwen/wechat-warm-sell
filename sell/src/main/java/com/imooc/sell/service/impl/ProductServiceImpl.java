@@ -2,7 +2,7 @@ package com.imooc.sell.service.impl;
 
 import com.imooc.sell.constant.ProductStatusEnum;
 import com.imooc.sell.dao.ProductInfoDao;
-import com.imooc.sell.pojo.dataobject.ProductInfoDO;
+import com.imooc.sell.pojo.dob.ProductInfoDO;
 import com.imooc.sell.pojo.dto.CartDTO;
 import com.imooc.sell.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;

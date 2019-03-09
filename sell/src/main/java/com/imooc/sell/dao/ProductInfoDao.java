@@ -1,6 +1,6 @@
 package com.imooc.sell.dao;
 
-import com.imooc.sell.pojo.dataobject.ProductInfoDO;
+import com.imooc.sell.pojo.dob.ProductInfoDO;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

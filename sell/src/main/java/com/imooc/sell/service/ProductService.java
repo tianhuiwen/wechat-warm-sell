@@ -1,6 +1,6 @@
 package com.imooc.sell.service;
 
-import com.imooc.sell.pojo.dataobject.ProductInfoDO;
+import com.imooc.sell.pojo.dob.ProductInfoDO;
 import com.imooc.sell.pojo.dto.CartDTO;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

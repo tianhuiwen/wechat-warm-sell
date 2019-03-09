@@ -1,6 +1,6 @@
 package com.imooc.sell.dao;
 
-import com.imooc.sell.pojo.dataobject.OrderMasterDO;
+import com.imooc.sell.pojo.dob.OrderMasterDO;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
