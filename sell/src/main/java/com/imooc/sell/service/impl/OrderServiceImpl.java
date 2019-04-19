@@ -53,7 +53,8 @@ public class OrderServiceImpl implements OrderService {
                 throw new SellException(ResultEnum.PRODUCT_NOT_EXIST);
             }
             //计算订单总价
-            orderAmount = productInfo.getProductPrice().multiply(new BigDecimal(orderDetail.getProductQuantity()))
+            orderAmount = productInfo.getProductPrice()
+                    .multiply(new BigDecimal(orderDetail.getProductQuantity()))
                     .add(orderAmount);
             //订单详情入库
             orderDetail.setDetailId(IdUtil.simpleUUID());

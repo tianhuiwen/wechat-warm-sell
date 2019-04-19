@@ -44,6 +44,9 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     public void decreaseStock(List<CartDTO> cartDTOList) {
+        for (CartDTO cartDTO : cartDTOList) {
+            ProductInfoDO one = productInfoDao.findOne(cartDTO.getProductId());
+        }
 
     }
 

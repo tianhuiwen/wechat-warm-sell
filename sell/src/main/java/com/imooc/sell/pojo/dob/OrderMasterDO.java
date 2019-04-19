@@ -14,6 +14,8 @@ import java.util.Date;
 /**
  * @author tianhuiwen
  * @date 2018/12/24 23:30
+ * <p>
+ * DynamicUpdate自动更新时间
  */
 @Entity
 @Data
