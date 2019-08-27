@@ -7,7 +7,7 @@ import com.imooc.sell.pojo.vo.ProductVO;
 import com.imooc.sell.pojo.vo.ResultVO;
 import com.imooc.sell.service.CategoryService;
 import com.imooc.sell.service.ProductService;
-import com.imooc.sell.utils.ResultVOUtil;
+import com.imooc.sell.util.ResultVOUtil;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;

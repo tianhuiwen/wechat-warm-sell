@@ -1,4 +1,4 @@
-package com.imooc.sell.utils;
+package com.imooc.sell.util;
 
 import com.imooc.sell.pojo.vo.ResultVO;
 
