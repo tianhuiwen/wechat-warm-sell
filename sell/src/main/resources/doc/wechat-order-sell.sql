@@ -43,7 +43,7 @@ CREATE TABLE `order_master` (
   `order_amount` decimal(8,2) NOT NULL COMMENT '订单总金额',
   `order_status` tinyint(3) NOT NULL DEFAULT '0' COMMENT '订单状态,默认0，新下单',
   `pay_status` tinyint(3) NOT NULL DEFAULT '0' COMMENT '支付状态，默认0未支付',
-  `create_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  `create_time` timestamp NOT  NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
   `update_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
   PRIMARY KEY (`order_id`) COMMENT '主键',
   KEY `idx_buyer_openid` (`buyer_openid`) COMMENT '索引'
